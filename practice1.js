@@ -148,3 +148,8 @@
 //     }).catch((error)=>{
 //         console.error(error.message);
 //     })
+
+
+
+
+// closure in js
