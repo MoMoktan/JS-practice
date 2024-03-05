@@ -1,30 +1,36 @@
-const add = document.getElementById('add') ;
+
 
 const firstvalue = document.getElementById('firstvalue');
 
-const secondvalue = document.getElementById('firstvalue');
+const secondvalue = document.getElementById('secondvalue');
 
 const display = document.getElementById('display');
 
-// add.addEventListener('click',Add);
+ let value1 = 0;
+ let value2 = 0
 
-// function Add(){
-    
-//     let value1 = Number(firstvalue.value);
+ function updateValue(){
+    value1 = Number(firstvalue.value);
+  
+    value2 = Number(secondvalue.value);
+}
 
-    
-//     let value2 = Number(secondvalue.value);
+////FOR ADDITION
 
-
-//     display.value = value1 + value2;
-// }
+const add = document.getElementById('add') ;
 
 add.addEventListener('click', function(){
-    let value1 = Number(firstvalue.value);
-
-    
-    let value2 = Number(secondvalue.value);
-
-
-    display.value = value1 + value2;
+    updateValue();
+        display.value = value1 + value2;
 })
+ 
+
+///////FOR SUBTRACTION
+
+const subbtn = document.getElementById('sub');
+
+subbtn.addEventListener('click', function(){
+    updateValue(); 
+    display.value = value1 - value2;
+});
+
